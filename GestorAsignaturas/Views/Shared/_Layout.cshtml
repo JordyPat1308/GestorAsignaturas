@@ -1,0 +1,71 @@
+﻿<!-- *****************************************************************
+Practica 09
+Integrantes: Jordy Mayorga, Joel Leon
+Fecha de realización: 11/12/2024
+Fecha de entrega: 18/12/2024
+Resultados:
+* La práctica de ASP.NET MVC permitió desarrollar una aplicación funcional para la gestión de asignaturas,
+  implementando operaciones CRUD (Crear, Leer, Actualizar y Eliminar) de forma eficiente. Se añadieron
+  validaciones en los modelos para garantizar la integridad de los datos, controladores para manejar la
+  lógica de negocio, y vistas personalizadas para la interacción con el usuario. Además, se integró
+  Entity Framework para la gestión de la base de datos, logrando una aplicación organizada, modular y
+  preparada para futuros requerimientos o escalabilidad.
+Conclusiones:
+* Se puede concluir que, la implementación de ASP.NET MVC permite estructurar aplicaciones web de forma
+  organizada y modular, separando las responsabilidades entre Modelos, Vistas y Controladores. Esto facilita
+  el mantenimiento del código, la reutilización de componentes y la escalabilidad del proyecto.
+* En conclusión, el uso de Entity Framework proporciona una forma eficiente de gestionar la interacción con
+  bases de datos, permitiendo realizar operaciones CRUD y migraciones de manera sencilla. Esto mejora la
+  productividad y reduce el tiempo necesario para implementar cambios en los modelos de datos.
+Recomendaciones:
+* Se recomienda, implementar validaciones exhaustivas tanto en el modelo como en el controlador para
+  garantizar la integridad de los datos. Además, realizar pruebas funcionales completas para verificar
+  el correcto comportamiento de todas las funcionalidades, especialmente en los escenarios de error.
+* Es recomendable, personalizar las vistas y mensajes de validación para ofrecer una interfaz más amigable
+  e intuitiva al usuario final. Utilizar hojas de estilo (CSS) y frameworks de diseño como Bootstrap puede
+  mejorar significativamente la apariencia y usabilidad de la aplicación.
+***************************************************************** -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Aplicacion de Gestion de asignaturas", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <h2>Escuela Politecnica Nacional</h2>
+                <h2>Tecnologias de la informacion</h2>
+                <h2>JM JL</h2>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Aplicacion de Jordy Mayorga y Joel Leon</p>
+        </footer>
+    </div>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
